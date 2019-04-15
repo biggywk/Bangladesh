@@ -1,14 +1,13 @@
 {
-  "main.css": "./static/css/main.59ed27f1.chunk.css",
-  "main.js": "./static/js/main.fba76292.chunk.js",
-  "main.js.map": "./static/js/main.fba76292.chunk.js.map",
-  "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
-  "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
-  "static/js/2.6efc73d3.chunk.js": "./static/js/2.6efc73d3.chunk.js",
-  "static/js/2.6efc73d3.chunk.js.map": "./static/js/2.6efc73d3.chunk.js.map",
-  "index.html": "./index.html",
-  "precache-manifest.38ee9603fd3119ce9ba398702e5eb6cf.js": "./precache-manifest.38ee9603fd3119ce9ba398702e5eb6cf.js",
-  "service-worker.js": "./service-worker.js",
-  "static/css/main.59ed27f1.chunk.css.map": "./static/css/main.59ed27f1.chunk.css.map",
-  "static/media/logo.svg": "./static/media/logo.5d5d9eef.svg"
+  "main.css": "/https://biggywk.github.io/Bangladesh/static/css/main.256b3c49.chunk.css",
+  "main.js": "/https://biggywk.github.io/Bangladesh/static/js/main.9abaf49e.chunk.js",
+  "main.js.map": "/https://biggywk.github.io/Bangladesh/static/js/main.9abaf49e.chunk.js.map",
+  "runtime~main.js": "/https://biggywk.github.io/Bangladesh/static/js/runtime~main.311e6c02.js",
+  "runtime~main.js.map": "/https://biggywk.github.io/Bangladesh/static/js/runtime~main.311e6c02.js.map",
+  "static/js/2.c06ff4d1.chunk.js": "/https://biggywk.github.io/Bangladesh/static/js/2.c06ff4d1.chunk.js",
+  "static/js/2.c06ff4d1.chunk.js.map": "/https://biggywk.github.io/Bangladesh/static/js/2.c06ff4d1.chunk.js.map",
+  "index.html": "/https://biggywk.github.io/Bangladesh/index.html",
+  "precache-manifest.05ec50a2f02218d1fbf775f25880e1e0.js": "/https://biggywk.github.io/Bangladesh/precache-manifest.05ec50a2f02218d1fbf775f25880e1e0.js",
+  "service-worker.js": "/https://biggywk.github.io/Bangladesh/service-worker.js",
+  "static/css/main.256b3c49.chunk.css.map": "/https://biggywk.github.io/Bangladesh/static/css/main.256b3c49.chunk.css.map"
 }
