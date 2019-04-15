@@ -4,7 +4,7 @@ class Badge extends PureComponent {
     
   static defaultProps = {
     fontColor: "white",
-    backgroundColor: "green",
+    backgroundColor: "rgb(158, 230, 152)",
   };
 
   constructor(props) {

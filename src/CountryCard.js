@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Badge from "./Badge"
+import Graph from "./Graph"
 
 const GraphTypes = {
   TAX: 'TAX', 
@@ -33,7 +34,8 @@ class CountryCard extends Component {
           {headerSection(this.props.country)}
           {this.badgesSection(Object.values(GraphTypes))}
           <h2 className="text-center mt-4">
-            {this.state.graphType}
+            {/* {this.state.graphType} */}
+            <Graph country={this.props.country} type={this.state.graphType} />
           </h2>
         </div>
     );
