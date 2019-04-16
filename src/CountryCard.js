@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Badge from "./Badge"
 import Graph from "./Graph"
+import Description from './Description';
 
 const GraphTypes = {
-  TAX: 'TAX', 
+  Revenue: 'Revenue', 
   GDP: 'GDP'
   };
 
@@ -45,11 +46,7 @@ class CountryCard extends Component {
             <Graph country={this.state.country} type={this.state.graphType} />
           </section>
           {/* -- */}
-
-          {/* wrap me to descriptive section pls */}
-          <h3>Description</h3>
-
-          {/* -- */}
+            <Description type={this.state.graphType} country={this.state.country} />
         </div>
     );
   }

@@ -1,3 +1,7 @@
+const Country = {
+  BANGLADESH: 'Bangladesh'
+}
+
 const bangladeshChartData =  { GDP: {
     labels: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017'],
     datasets:[
@@ -55,11 +59,11 @@ const bangladeshChartData =  { GDP: {
         borderColor: "rgb(200, 148, 166)"
       }
     ] },
-        TAX: {
+        Revenue: {
             labels: ['2010', '2011', '2012', '2013', '2014', '2015'],
             datasets:[
               {
-                label:'TAX from datasets (USD billion)',
+                label:'Revenue from datasets (USD billion)',
                 fill: false,
                 data:[
                   998712.2,
@@ -82,7 +86,7 @@ const bangladeshChartData =  { GDP: {
                 ],
                 borderColor: "rgb(146, 226, 253)"
               }, {
-                label:'TAX from regression model (USD billion)',
+                label:'Revenue from regression model (USD billion)',
                 fill: false,
                 data:[
                   1000990.54,
@@ -109,13 +113,10 @@ const bangladeshChartData =  { GDP: {
         }
   }
 
-const Country = {
-    BANGLADESH: 'Bangladesh', 
-}
-
 class DataSource {
     static getChartData(type, country) {
       let data = {}
+
         switch(country) {
             case (Country.BANGLADESH): 
                 data =  bangladeshChartData[type]
