@@ -5,7 +5,7 @@ class LineChart extends Component{
   constructor(props){
     super(props);
     this.state = {
-      chartData:props.chartData
+      chartData: this.props.chartData
     }
   }
 
@@ -15,6 +15,13 @@ class LineChart extends Component{
     legendPosition:'right',
   }
 
+  componentWillReceiveProps(nextProps ){
+    // don't set state like this
+    this.setState({type : nextProps.type})
+    this.setState({chartData : nextProps.chartData})
+
+  }
+  
   render(){
     return (
       <div className="chart">
