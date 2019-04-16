@@ -5,16 +5,25 @@ class Badge extends PureComponent {
   static defaultProps = {
     fontColor: "white",
     backgroundColor: "rgb(158, 230, 152)",
+    cursor: "pointer"
   };
 
   constructor(props) {
     super(props);
-    this.state = {badgeStyle : {
-        cursor: "pointer",
-        color: this.props.fontColor,
-        backgroundColor: this.props.backgroundColor
-    }}
+    this.state = {
+      badgeStyle : {}
+    }
 };
+
+  componentWillMount() {
+    this.setState({
+      badgeStyle: {
+          cursor:this.props.cursor,
+          color: this.props.fontColor,
+          backgroundColor: this.props.backgroundColor
+      }
+    })
+  }
 
   render() {
     return (

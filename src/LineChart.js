@@ -5,8 +5,8 @@ class LineChart extends Component{
   constructor(props){
     super(props);
     this.state = {
-      chartData: this.props.chartData,
-      yAxesLabel: "USD million"
+      chartData: {},
+      yAxesLabel: ""
     }
   }
 
@@ -14,13 +14,21 @@ class LineChart extends Component{
     displayTitle:true,
     displayLegend: true,
     legendPosition:'right',
+    yAxesLabel: "USD million"
   }
 
+  componentWillMount() {
+    this.setState({
+      chartData: this.props.chartData,
+      yAxesLabel: this.props.yAxesLabel
+    })
+  }
+  
   componentWillReceiveProps(nextProps ){
-    // don't set state like this
-    this.setState({type : nextProps.type})
-    this.setState({chartData : nextProps.chartData})
-
+    this.setState({
+                    type : nextProps.type,
+                    chartData: nextProps.chartData
+    })
   }
   
   render(){
