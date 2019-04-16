@@ -5,7 +5,8 @@ class LineChart extends Component{
   constructor(props){
     super(props);
     this.state = {
-      chartData: this.props.chartData
+      chartData: this.props.chartData,
+      yAxesLabel: "USD million"
     }
   }
 
@@ -38,7 +39,7 @@ class LineChart extends Component{
               position:this.props.legendPosition
             },
             scales: {
-                yAxes: [{
+                xAxes: [{
                     ticks: {
                         beginAtZero:true
                     },
@@ -47,7 +48,17 @@ class LineChart extends Component{
                         labelString: 'Year (Christian era)',
                         fontSize: 20
                     }
-                }]
+                }],
+                yAxes: [{
+                  ticks: {
+                      beginAtZero:true
+                  },
+                  scaleLabel: {
+                      display: true,
+                      labelString: this.state.yAxesLabel,
+                      fontSize: 20
+                  }
+              }]
             }
           }}
         />
