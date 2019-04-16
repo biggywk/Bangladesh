@@ -6,28 +6,34 @@ class LineChart extends Component{
     super(props);
     this.state = {
       chartData: {},
-      yAxesLabel: ""
+      yAxesLabel: "",
+      xAxesLabel: ""
     }
   }
 
   static defaultProps = {
+    type: "GDP",
     displayTitle:true,
     displayLegend: true,
     legendPosition:'right',
-    yAxesLabel: "USD million"
+    yAxesLabel: "USD million",
+    xAxesLabel: "Year (Christian era)"
   }
 
   componentWillMount() {
     this.setState({
       chartData: this.props.chartData,
-      yAxesLabel: this.props.yAxesLabel
+      yAxesLabel: this.props.yAxesLabel,
+      xAxesLabel: this.props.xAxesLabel
     })
   }
   
   componentWillReceiveProps(nextProps ){
     this.setState({
                     type : nextProps.type,
-                    chartData: nextProps.chartData
+                    chartData: nextProps.chartData,
+                    yAxesLabel: nextProps.yAxesLabel,
+                    xAxesLabel: nextProps.xAxesLabel
     })
   }
   
@@ -53,7 +59,7 @@ class LineChart extends Component{
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Year (Christian era)',
+                        labelString: this.state.xAxesLabel,
                         fontSize: 20
                     }
                 }],
