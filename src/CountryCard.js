@@ -12,14 +12,13 @@ class CountryCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      graphType: GraphTypes.GDP
+      graphType: GraphTypes.GDP,
+      country: this.props.country
     };
   }
 
   onSetGraphType = (e) => {
-    this.setState({graphType: e.target.getAttribute("value")}, () => {
-      console.log(this.state.graphType)
-    })
+    this.setState({graphType: e.target.getAttribute("value")})
   }
 
   badgesSection = (graphTypes) => {
@@ -31,12 +30,14 @@ class CountryCard extends Component {
   render() {
     return (
         <div className="d-flex flex-column">
-          {headerSection(this.props.country)}
+          {headerSection(this.state.country)}
           {this.badgesSection(Object.values(GraphTypes))}
+
+          {/* wrap me pls */}
           <h2 className="text-center mt-4">
-            {/* {this.state.graphType} */}
-            <Graph country={this.props.country} type={this.state.graphType} />
+          <Graph country={this.state.country} type={this.state.graphType} />
           </h2>
+          {/* -- */}
         </div>
     );
   }
