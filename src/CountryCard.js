@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Badge from "./Badge"
 import Graph from "./Graph"
+import Description from './Description';
 
 const GraphTypes = {
-  TAX: 'TAX', 
+  Revenue: 'Revenue', 
   GDP: 'GDP'
   };
 
@@ -12,9 +13,16 @@ class CountryCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      graphType: GraphTypes.GDP,
-      country: this.props.country
+      graphType: "",
+      country: ""
     };
+  }
+
+  componentWillMount() {
+    this.setState({
+      country: this.props.country,
+      graphType: GraphTypes.GDP
+      })
   }
 
   onSetGraphType = (e) => {
@@ -31,13 +39,14 @@ class CountryCard extends Component {
     return (
         <div className="d-flex flex-column">
           {headerSection(this.state.country)}
-          {this.badgesSection(Object.values(GraphTypes))}
-
-          {/* wrap me pls */}
-          <h2 className="text-center mt-4">
-          <Graph country={this.state.country} type={this.state.graphType} />
-          </h2>
+            {/* wrap me to charts section pls*/}
+          <section>
+            <h3>Chart from Datasets vs Regression model</h3>
+            {this.badgesSection(Object.values(GraphTypes))}
+            <Graph country={this.state.country} type={this.state.graphType} />
+          </section>
           {/* -- */}
+            <Description type={this.state.graphType} country={this.state.country} />
         </div>
     );
   }

@@ -13,14 +13,13 @@ class Graph extends Component {
       }
 };
 
-  componentWillReceiveProps(nextProps ){
+  componentWillReceiveProps(nextProps) {
     this.setState({type : nextProps.type}, () => {this.getChartData()})
   }
 
-  componentWillMount(){
+  componentWillMount() {
         this.getChartData();
   }
-
   
   getChartData = () => {
     this.setState({

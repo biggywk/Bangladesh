@@ -5,21 +5,36 @@ class LineChart extends Component{
   constructor(props){
     super(props);
     this.state = {
-      chartData: this.props.chartData
+      chartData: {},
+      yAxesLabel: "",
+      xAxesLabel: ""
     }
   }
 
   static defaultProps = {
+    type: "GDP",
     displayTitle:true,
     displayLegend: true,
     legendPosition:'right',
+    yAxesLabel: "USD million",
+    xAxesLabel: "Year (Christian era)"
   }
 
+  componentWillMount() {
+    this.setState({
+      chartData: this.props.chartData,
+      yAxesLabel: this.props.yAxesLabel,
+      xAxesLabel: this.props.xAxesLabel
+    })
+  }
+  
   componentWillReceiveProps(nextProps ){
-    // don't set state like this
-    this.setState({type : nextProps.type})
-    this.setState({chartData : nextProps.chartData})
-
+    this.setState({
+                    type : nextProps.type,
+                    chartData: nextProps.chartData,
+                    yAxesLabel: nextProps.yAxesLabel,
+                    xAxesLabel: nextProps.xAxesLabel
+    })
   }
   
   render(){
@@ -38,16 +53,26 @@ class LineChart extends Component{
               position:this.props.legendPosition
             },
             scales: {
-                yAxes: [{
+                xAxes: [{
                     ticks: {
                         beginAtZero:true
                     },
                     scaleLabel: {
                         display: true,
-                        labelString: 'Year (Christian era)',
+                        labelString: this.state.xAxesLabel,
                         fontSize: 20
                     }
-                }]
+                }],
+                yAxes: [{
+                  ticks: {
+                      beginAtZero:true
+                  },
+                  scaleLabel: {
+                      display: true,
+                      labelString: this.state.yAxesLabel,
+                      fontSize: 20
+                  }
+              }]
             }
           }}
         />
