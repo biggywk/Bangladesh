@@ -63,7 +63,7 @@ const bangladeshChartData =  { GDP: {
             labels: ['2010', '2011', '2012', '2013', '2014', '2015'],
             datasets:[
               {
-                label:'Revenue from datasets (USD billion)',
+                label:'Revenue from datasets',
                 fill: false,
                 data:[
                   998712.2,
@@ -86,7 +86,7 @@ const bangladeshChartData =  { GDP: {
                 ],
                 borderColor: "rgb(146, 226, 253)"
               }, {
-                label:'Revenue from regression model (USD billion)',
+                label:'Revenue from regression model',
                 fill: false,
                 data:[
                   1000990.54,
