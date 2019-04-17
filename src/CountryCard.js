@@ -43,11 +43,11 @@ class CountryCard extends Component {
 
   render() {
     return (
-        <div className="d-flex flex-column mt-3">
+        <div className="d-flex flex-column mt-3 fade-up">
           {headerSection(this.state.country)}
             {/* wrap me to charts section pls*/}
           <section>
-            <h3>Chart from Datasets vs Regression model</h3>
+            <h3 className="text-center">Chart from Datasets vs Regression model</h3>
             {this.badgesSection(Object.values(GraphTypes))}
             <Graph country={this.state.country} type={this.state.graphType} />
           </section>
