@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Bangladesh/precache-manifest.ded146d809986c4b307963b87b2c2795.js"
+  "/Group3-Middle-East-And-South-Asia/precache-manifest.ab80daad94e8e555737874150e116f41.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Bangladesh/index.html", {
+workbox.routing.registerNavigationRoute("/Group3-Middle-East-And-South-Asia/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
