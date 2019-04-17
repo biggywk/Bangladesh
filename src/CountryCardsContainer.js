@@ -168,7 +168,16 @@ class CountryCardsContainer extends Component {
           is Personal income tax = 30% from all factors.
         </p>
         </section>
-
+        <section className="text-center">
+          <h4>
+            Group Members
+          </h4>
+          <p>Wachirawit Kaewlomsup 5910505513</p>
+          <p>Chanchai Charnataparporn	5910503707</p>
+          <p>Suphanath Kaewboonruang 5810502466</p>
+          <p>Suphanath Kaewboonruang 5810502466</p>
+          <p>Poonsak Nuchsiri	5810502393</p>
+        </section>
         </div>
       </>
     );
