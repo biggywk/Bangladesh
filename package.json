@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
+  "name": "middle-east-and-south-asia",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://biggywk.github.io/Bangladesh",
+  "private": false,
+  "homepage": "https://biggywk.github.io/Group3-Middle-East-And-South-Asia/",
   "dependencies": {
     "chart.js": "^2.8.0",
     "datamaps": "^0.5.9",
