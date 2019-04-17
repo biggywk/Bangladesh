@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./https://biggywk.github.io/Bangladesh/",
+  "homepage": "https://biggywk.github.io/Bangladesh",
   "dependencies": {
     "chart.js": "^2.8.0",
     "gh-pages": "^2.0.1",
