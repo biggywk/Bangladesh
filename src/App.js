@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import CountryCard from "./CountryCard"
+import CountryCardContiner from "./CountryCardsContainer"
 
 class App extends Component {
 
   render() {
     return (
-      <div className="container">
-       <CountryCard  country="Bangladesh"/>
-      </div>
+      <CountryCardContiner />
     );
   }
 }

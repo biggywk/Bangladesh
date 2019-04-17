@@ -8,24 +8,31 @@ class Graph extends Component {
     super(props);
     this.state = {
         chartData:{},
-        type: this.props.type,
-        country: this.props.country
+        type: "",
+        country: ""
       }
 };
 
   componentWillReceiveProps(nextProps) {
-    this.setState({type : nextProps.type}, () => {this.getChartData()})
+    this.setState({
+      type : nextProps.type,
+      country : nextProps.country
+    }, () => {this.getChartData(this.state.type, this.state.country)})
   }
 
   componentWillMount() {
-        this.getChartData();
+        this.setState({
+          type: this.props.type,
+          country: this.props.country
+        }, () => {
+          this.getChartData(this.state.type, this.state.country)
+        })
   }
   
-  getChartData = () => {
+  getChartData = (type, country) => {
     this.setState({
-      chartData: DataSource.getChartData(this.state.type, this.state.country)
-      }
-    )
+      chartData: DataSource.getChartData(type, country)
+      })
   }
   render() {
     return (

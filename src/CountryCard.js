@@ -4,8 +4,8 @@ import Graph from "./Graph"
 import Description from './Description';
 
 const GraphTypes = {
-  Revenue: 'Revenue', 
-  GDP: 'GDP'
+  GDP: 'GDP',
+  Revenue: 'Revenue'
   };
 
 class CountryCard extends Component {
@@ -23,6 +23,12 @@ class CountryCard extends Component {
       country: this.props.country,
       graphType: GraphTypes.GDP
       })
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      country: nextProps.country
+    })
   }
 
   onSetGraphType = (e) => {
