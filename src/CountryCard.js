@@ -43,7 +43,7 @@ class CountryCard extends Component {
 
   render() {
     return (
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column mt-3">
           {headerSection(this.state.country)}
             {/* wrap me to charts section pls*/}
           <section>
