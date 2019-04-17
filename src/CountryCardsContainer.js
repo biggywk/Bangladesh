@@ -133,29 +133,42 @@ class CountryCardsContainer extends Component {
   render() {
     return (
       <>
-        <nav className="navbar navbar-dark bg-dark" style={{position: "fixed", width: "100%"}}>
+        <nav className="navbar navbar-dark bg-dark front animated animatedFadeInUp fadeInUp" style={{position: "fixed", width: "100%"}}>
           <div className="container">
             <div className="container" style={{color:"white", fontSize:"20px"}}>Middle East & South Asia</div>
           </div>
         </nav>
-        <div id="hint" style={{height: "12px", width: "1px"}}></div>
-        <div id="MiddleEast&SouthAsia" style={{height: "500px", width: "100%"}}></div>
-        <div className="container">
+        <div id="hint" style={{height: "12px", width: "1px"}} className="animated animatedFadeInUp fadeInUp"></div>
+        <div id="MiddleEast&SouthAsia" className="animated animatedFadeInUp fadeInUp" style={{height: "500px", width: "100%"}}></div>
+        <div className="container animated animatedFadeInUp fadeInUp">
         <CountryCard  country={this.state.country}/>
-        <h2>
+        <section>
+        <h2 className="mb-1">
           GDP summary %
         </h2>
         <Pie
           data={gdpData}
           options={{options}}
         />
-        <h2>
+        <p className="mt-1">
+            The pie chart show that, the factor that have a most affect to GDP of this 5 countrys
+            is Services = 33.33% from all factors.
+        </p>
+        </section>
+        <section>
+        <h2 className="mb-1">
           Revenue summary %
         </h2>
         <Pie
           data={taxData}
           options={{options}}
         />
+        <p className="mt-1">
+          The pie chart show that, the factor that have a most affect to government's revenue of this 5 countrys
+          is Personal income tax = 30% from all factors.
+        </p>
+        </section>
+
         </div>
       </>
     );
